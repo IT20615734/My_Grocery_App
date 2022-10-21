@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/orderID"
+        android:layout_width="258dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:background="@color/lightgreen"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/search"
+        android:inputType="textPersonName"
+        android:textColorHint="#1B5E20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="108dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="@string/Search"
+        android:textColor="#4A148C"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frgmentDefault"
+        android:name="com.example.my_grocery_app.trackImage"
+        android:layout_width="413dp"
+        android:layout_height="581dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
