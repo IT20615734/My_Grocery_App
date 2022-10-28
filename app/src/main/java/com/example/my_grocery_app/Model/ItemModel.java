@@ -39,4 +39,7 @@ public class ItemModel {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public void add(ItemModel itemModel) {
+    }
 }

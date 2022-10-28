@@ -1,5 +1,6 @@
 package com.example.my_grocery_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,13 +12,18 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.example.my_grocery_app.Adapter.MyItemAdapter;
 import com.example.my_grocery_app.Listener.ICartLoadListener;
 import com.example.my_grocery_app.Listener.IItemLoadListener;
 import com.example.my_grocery_app.Model.CartModel;
 import com.example.my_grocery_app.Model.ItemModel;
 import com.example.my_grocery_app.utils.SpaceItemDecoration;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.nex3z.notificationbadge.NotificationBadge;
 
 import java.util.ArrayList;
@@ -56,7 +62,30 @@ public class MainActivity extends AppCompatActivity implements IItemLoadListener
     private void loadItemFromFirebase() {
         List<ItemModel> itemModels = new ArrayList<>();
         FirebaseDatabase.getInstance()
-                .getReference(Item)
+                .getReference("Item")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists())
+                        {
+                            for(DataSnapshot itemsnapshot:snapshot.getChildren())
+                            {
+                                ItemModel itemModel=itemsnapshot.getValue(ItemModel.class);
+                                itemModel.setKey(itemsnapshot.getKey());
+                                itemModel.add(itemModel);
+                            }
+                            itemLoadListener.onItemLoadSuccess(itemModels);
+                        }
+                        else
+                            itemLoadListener.onItemLoadFailed("can't find item");
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+itemLoadListener.onItemLoadFailed(error.getMessage());
+                    }
+                });
     }
 
     private void init() {
@@ -73,11 +102,13 @@ public class MainActivity extends AppCompatActivity implements IItemLoadListener
 
     @Override
     public void onItemLoadSuccess(List<ItemModel> itemModelList) {
-
+        MyItemAdapter adapter=new MyItemAdapter(this,itemModelList);
+        recyclerItem.setAdapter(adapter);
     }
 
     @Override
     public void onItemLoadFailed(String message) {
+        Snackbar.make(mainLayout,message,Snackbar.LENGTH_LONG).show();
 
     }
 
