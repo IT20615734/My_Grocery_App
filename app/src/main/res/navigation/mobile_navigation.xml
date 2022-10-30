@@ -35,4 +35,10 @@
         android:label="@string/ContactUS"
         tools:layout="@layout/fragment_contactus" />
 
+    <activity
+        android:id="@+id/nav_deliveryDetails"
+        android:name="com.example.my_grocery_app.ui.delivery.DeliveryDetails"
+        android:label="@string/Delivery"
+        tools:layout="@layout/activity_delivery_details" />
+
 </navigation>
