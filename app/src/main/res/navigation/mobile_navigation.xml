@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.my_grocery_app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_delivery"
+        android:name="com.example.my_grocery_app.ui.delivery.DeliveryTrackFragment"
+        android:label="@string/Track"
+        tools:layout="@layout/fragment_deliverytrack" />
+
+    <fragment
+        android:id="@+id/nav_feedBack"
+        android:name="com.example.my_grocery_app.ui.feedback.FeedbackFragment"
+        android:label="@string/FeedBack"
+        tools:layout="@layout/fragment_feedback" />
+
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.my_grocery_app.ui.about.AboutUsFragment"
+        android:label="@string/AboutUs"
+        tools:layout="@layout/fragment_aboutus" />
+    <fragment
+        android:id="@+id/nav_contactUs"
+        android:name="com.example.my_grocery_app.ui.contactus.ContactUsFragment"
+        android:label="@string/ContactUS"
+        tools:layout="@layout/fragment_contactus" />
+
+    <activity
+        android:id="@+id/nav_deliveryDetails"
+        android:name="com.example.my_grocery_app.ui.delivery.DeliveryDetails"
+        android:label="@string/Delivery"
+        tools:layout="@layout/activity_delivery_details" />
+
+</navigation>

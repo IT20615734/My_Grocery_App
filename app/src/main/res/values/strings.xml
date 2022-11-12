@@ -1,3 +1,74 @@
 <resources>
     <string name="app_name">My_Grocery_App</string>
+    <string name="nav_header_title">John Doe</string>
+    <string name="nav_header_subtitle">jonie@gmail.com</string>
+    <string name="Delivery">Delivery</string>
+    <string name="subtopic">Please enter recipient\'s details below.</string>
+    <string name="Name">Recipient Name</string>
+    <string name="ContactNo">Contact No</string>
+    <string name="Email">Email</string>
+    <string name="City">City</string>
+    <string name="postalCode">PostalCode</string>
+    <string name="Address">Address</string>
+    <string name="feedBack">Send your feedback also..</string>
+    <string name="DeliveryInstructions">Delivery Instructions</string>
+    <string name="Message">Message</string>
+    <string name="Save">Save</string>
+    <string name="Rate">Rate Us!</string>
+    <string name="Ratings">Ratings</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile Information</string>
+    <string name="category">Categories</string>
+    <string name="Cart">Saved Cart</string>
+    <string name="Track">Track Your Delivery</string>
+    <string name="AboutUs">About US</string>
+    <string name="FeedBack">FeedBack</string>
+    <string name="ContactUS">Contact Us</string>
+    <string name="LogOut">Log Out</string>
+    <string name="Image">Image</string>
+    <string name="search">Enter your Order ID here</string>
+    <string name="Search">Search</string>
+    <string name="Category">Category</string>
+    <string name="OrderID1">Order ID -123456</string>
+    <string name="OrderID2">Order ID -123459</string>
+    <string name="date1">2022/09/01</string>
+    <string name="date2">2022/09/02</string>
+    <string name="date3">2022/09/05</string>
+    <string name="date4">2022/09/03</string>
+    <string name="date">2022/09/05</string>
+    <string name="Delivered">Delivered</string>
+    <string name="OutforDelivery">Out for Delivery</string>
+    <string name="OrderPlaced">Order Placed</string>
+    <string name="Prepared">Being\n Prepared</string>
+    <string name="EstimateDate">Estimate Date :</string>
+    <string name="Rating">Rate 4.0</string>
+    <string name="Grocery">GroceryMart</string>
+    <string name="number">0112405405</string>
+    <string name="email">groceryMart@gmail.com</string>
+    <string name="address">192/A,Old Kotte Road, Rajagiriya</string>
+    <string name="map">map</string>
+    <string name="product">Product</string>
+    <string name="Update">Update</string>
+    <string name="Cancle" />
+    <string name="deliveries">Deliveries</string>
+    <string name="Send">Send</string>
+    <string name="Reply">Reply</string>
+    <string name="address1">Reciver:R.M.K.C.Rathanayake\n0776785676\nNo.256/1,Viharamahadevi Road,\nBaththaramulla,\nColombo</string>
+    <string name="address2">Reciver:R.M.K.Perera\n0776785676\nNo.45/1,Pittugala Junction,\nNew Kandy Road,\nMalabe</string>
+    <string name="Welcome">Welcome to Grocery Mart !\n\nWe  provide your all essential groceries to your door step.</string>
+    <string name="message1">Reciver:R.M.K.C.Rathnayake\nrmkc@gmail.com\nFast Delivery.Thankyou.</string>
+    <string name="message2">Reciver:R.M.K.Perera\nrmkperera@gmail.com\nPacking is not good.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="OrderEstimateDate">Order Estimate Date</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>
